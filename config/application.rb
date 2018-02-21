@@ -15,5 +15,7 @@ module SucksRocks
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths += %W(#{config.root}/app/services)
+
+    config.expect_with(:rspec) { |c| c.syntax = :should }
   end
 end
